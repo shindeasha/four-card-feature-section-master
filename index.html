@@ -11,20 +11,21 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; margin-top: 40px;}
     .attribution a { color: hsl(228, 45%, 44%); }
     body{
       margin: 0;
       font-family: sans-serif;
-      background-color: #eaf6f6;
+      background-color: hsl(0, 0%, 98%);
     }
     .head1{
       font-weight: lighter;
       font-family: 'Work Sans', sans-serif;
+      color: hsl(234, 12%, 34%);
     }
-    .head2{
-
-      color: #393e46;
+    strong{
+      font-weight: 600;
+      display: block;
     }
     .heading{
       margin-top: 60px;
@@ -39,112 +40,105 @@
       font-weight: bolder;
     }
     .Supervisor{
-      background-color: white;
-      width:330px;
-      height: 230px;
       border-top:4px solid #2EC0C0;
-      border-radius: 8px;
-      position: absolute;
-      box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.10);
-      top: 140px;
-      left: 150px;
+      grid-column: 1;
+      grid-row: 2 / span 2;
     }
     .Team{
-      background-color: white;
-      width:330px;
-      height: 230px;
+
       border-top:4px solid #DC0909;
       border-radius: 8px;
-      box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.10);
-      position: absolute;
-      top: 0;
-      left: 510px;
+      grid-column: 2;
+        grid-row: 1 / span 2;
     }
     .Karma{
-      background-color: white;
-      width:330px;
-      height: 230px;
+
       border-top:4px solid #F98F05;
-      border-radius: 8px;
-      margin:50px auto 0 auto;
-      box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.10);
-      position: absolute;
-      top: 230px;
-      left: 510px;
+
+      grid-column: 2;
+      grid-row: 3 / span 2;
+
     }
     .Calculator{
-      background-color: white;
-      width:330px;
-      height: 230px;
       border-top:4px solid #1C5CE7;
-      border-radius: 8px;
-      position: absolute;
-      box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.10);
-      right: 150px;
-      top: 140px;
+      grid-column: 3;
+      grid-row: 2 / span 2;
     }
     .main{
-      position: relative;
-      margin-top: 50px;
+    display: grid;
+    gap: 30px;
+    margin: 50px auto auto auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    max-width: 1100px;
     }
-    p{
-      font-size: 13px;
-      width:60%;
+    .desc{
+      font-size: 0.9rem;
+      width:75%;
       margin-left: 30px;
       color:  #aaaaaa;
+      line-height: 1.8;
     }
     h3{
        margin: 30px 0 0 30px;
     }
     img{
-      position: absolute;
-      right: 30px;
-      bottom: 30px;
+      display: block;
+      margin-left:auto;
+      margin-right: 20px;
+    }
+    .card{
+      background-color: white;
+      width:330px;
+      height: 230px;
+      border-radius: 8px;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.10), 0 15px 12px rgba(0,0,0,0.10);
     }
   </style>
 </head>
 <body>
   <div class="heading">
-    <h1 class="head1">Reliable, efficient delivery</h1>
-    <h1 class="head2">Powered by Technology</h1>
+    <h1 class="head1">Reliable, efficient delivery <strong >Powered by Technology</strong></h1>
     <p class="tag">
       Our Artificial Intelligence powered tools use millions of project data points to ensure that your project is successful
     </p>
   </div>
   <div class="main">
-    <div class="Supervisor">
+    <div class="card Supervisor">
       <h3>Supervisor</h3>
-      <p>Monitors activity to identify project roadblocks</p>
+      <p class="desc">Monitors activity to identify project roadblocks</p>
       <img src="images/icon-supervisor.svg" alt="super_img">
     </div>
 
-    <div class="Team">
+    <div class="card Team">
       <h3>Team Builder</h3>
-      <p>Scans our talent network to create the optimal team for your project</p>
+      <p class="desc">Scans our talent network to create the optimal team for your project</p>
       <img src="images/icon-team-builder.svg" alt="super_img">
     </div>
 
-    <div class="Karma">
+    <div class="card Karma">
       <h3>Karma</h3>
-      <p>Regularly evaluates our talent to ensure quality</p>
+      <p class="desc">Regularly evaluates our talent to ensure quality</p>
       <img src="images/icon-karma.svg" alt="super_img">
     </div>
 
-    <div class="Calculator">
+    <div class="card Calculator">
       <h3>Calculator</h3>
-      <p>Uses data from past projects to provide better delivery estimates</p>
+      <p class="desc">Uses data from past projects to provide better delivery estimates</p>
       <img src="images/icon-calculator.svg" alt="super_img">
     </div>
   </div>
 
 
 
+  <div class="">
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Your Name Here</a>.
+      </p>
+    </footer>
+  </div>
 
-  <!--<footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>-->
 </body>
 </html>
